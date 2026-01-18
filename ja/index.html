@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>河野 航 — CV</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --text-main: #e9ecf1;
+      --text-muted: #b8c0d0;
+      --accent: #6ee7ff;
+      --border: rgba(255, 255, 255, 0.12);
+      --radius: 16px;
+      --max-width: 850px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 15% 10%, rgba(110,231,255,0.1), transparent 40%), var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 60px 24px; }
+
+    header { text-align: center; margin-bottom: 50px; }
+    .avatar { width: 120px; height: 120px; border-radius: 50%; border: 1px solid var(--accent); padding: 4px; margin-bottom: 20px; }
+    h1 { margin: 0; font-size: 36px; letter-spacing: -0.02em; }
+    .title-sub { margin: 8px 0 20px; color: var(--accent); font-size: 1.2rem; font-weight: 500; }
+
+    .meta { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; font-size: 14px; color: var(--text-muted); }
+    .meta a { color: var(--text-main); text-decoration: none; border-bottom: 1px solid rgba(110,231,255,0.3); transition: 0.2s; }
+    .meta a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    section { margin-bottom: 50px; }
+    h2 {
+      font-size: 13px; text-transform: uppercase; letter-spacing: 0.2em;
+      color: var(--accent); border-bottom: 1px solid var(--border);
+      padding-bottom: 8px; margin-bottom: 24px;
+    }
+
+    /* --- Tab Component --- */
+    .tab-container { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+    .tab-nav { display: flex; border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02); overflow-x: auto; }
+    .tab-btn {
+      flex: 1; padding: 16px; border: none; background: none; color: var(--text-muted);
+      cursor: pointer; font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; transition: 0.3s; white-space: nowrap;
+    }
+    .tab-btn.active { color: var(--accent); background: rgba(110,231,255,0.08); box-shadow: inset 0 -2px 0 var(--accent); }
+    .tab-content { padding: 24px; display: none; min-height: 220px; }
+    .tab-content.active { display: block; animation: fadeIn 0.4s ease; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* --- Items & Cards --- */
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .item-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
+    .item-title { font-weight: 700; font-size: 1.1rem; color: var(--text-main); text-decoration: none; transition: 0.2s; }
+    .item-title:hover { color: var(--accent); }
+    .item-venue { font-size: 13px; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .item-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+
+    .desc { font-size: 14.5px; color: var(--text-muted); }
+    .bullets { margin: 12px 0 0 18px; padding: 0; font-size: 14px; color: var(--text-muted); }
+    .bullets li { margin-bottom: 8px; }
+
+    .doi-link { font-size: 13px; color: var(--accent); text-decoration: none; opacity: 0.8; }
+    .doi-link:hover { opacity: 1; text-decoration: underline; }
+
+    footer { text-align: center; padding: 60px 20px; font-size: 13px; color: var(--text-muted); opacity: 0.6; border-top: 1px solid var(--border); }
+
+    @media (max-width: 600px) {
+      .item-header { flex-direction: column; gap: 4px; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <img src="../assets/avatar.jpeg" alt="河野 航" class="avatar" />
+    <h1>河野 航</h1>
+    <div class="meta">
+      <span>📍 神奈川県川崎市</span>
+      <a href="mailto:wataru.kohno@gmail.com">wataru.kohno@gmail.com</a>
+      <a href="https://www.linkedin.com/in/wkohno" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=-o4nExgAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a href="https://www.nec-labs.com/research/optical-networking-sensing/people/wataru-kohno/" target="_blank" rel="noopener noreferrer">NEC Labs Profile</a>
+      <a href="../index.html" aria-label="Go to English page">English</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>概要</h2>
+    <p class="desc">
+      主に光ファイバ・音響センシング技術を研究。Distributed Acoustic Sensing（DAS）技術を中心に、
+      信号処理・物理モデルに基づくモデリングを組み合わせ、通信インフラである光ファイバを大規模なセンサアレイとして活用する
+      センシングシステムの開発を目指しています。
+    </p>
+  </section>
+
+  <section id="research-focus">
+    <h2>研究分野</h2>
+    <div class="card">
+      <ul class="bullets">
+        <li>分布型光ファイバセンシング（DFOS）/ 分布型音響センシング（DAS）</li>
+        <li>光ファイバ音響認識・AI強化センシング（インフラ監視）</li>
+        <li>高感度レーザー振動計／振動センシング技術</li>
+        <li>応用：周界警備、地震・地盤モニタリング、重要インフラ保護</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="expertise">
+    <h2>専門性</h2>
+    <div class="tab-container">
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="openTab(event, 'optical')">光学システム</button>
+        <button class="tab-btn" onclick="openTab(event, 'signal')">信号処理・AI</button>
+        <button class="tab-btn" onclick="openTab(event, 'tools')">実務スキル</button>
+        <button class="tab-btn" onclick="openTab(event, 'physics')">理論物理</button>
+      </div>
+
+      <div id="optical" class="tab-content active">
+        <div style="font-weight: 600; margin-bottom: 10px; color: var(--accent);">
+          光センシング／物理システム
+        </div>
+        <ul class="bullets">
+          <li>Distributed Acoustic Sensing（DAS）および &phi;-OTDR</li>
+          <li>光ファイバ・バイブロメータ／音響センシングシステム</li>
+          <li>信号取得・システムモデリング（センシング装置）</li>
+        </ul>
+      </div>
+
+      <div id="physics" class="tab-content">
+        <div style="font-weight: 600; margin-bottom: 10px; color: var(--accent);">
+          理論・数理物理
+        </div>
+        <ul class="bullets">
+          <li>量子場理論・多体系理論</li>
+          <li>超伝導・渦糸（vortex）物理</li>
+          <li>ボース＝アインシュタイン凝縮（BEC）・量子気体</li>
+          <li>相関現象に対する量子統計原理の一般化</li>
+        </ul>
+      </div>
+
+      <div id="signal" class="tab-content">
+        <div style="font-weight: 600; margin-bottom: 10px; color: var(--accent);">
+          信号処理／機械学習
+        </div>
+        <ul class="bullets">
+          <li>時間周波数解析・スペクトル解析</li>
+          <li>音響信号処理・特徴抽出</li>
+          <li>物理制約を反映したデータ生成・音イベント分類</li>
+          <li>センシング制約を踏まえたMLモデル統合</li>
+        </ul>
+      </div>
+
+      <div id="tools" class="tab-content">
+        <div style="font-weight: 600; margin-bottom: 10px; color: var(--accent);">
+          数値計算／ツール
+        </div>
+        <ul class="bullets">
+          <li>物理システムの数値シミュレーション・モデリング</li>
+          <li>Python（PyTorch/NumPy）による解析・プロトタイピング・ML</li>
+          <li>データ同化・モデルベース推定</li>
+          <li>LaTeXによる学術論文執筆</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>主要論文（最近）</h2>
+
+    <div class="card">
+      <div class="item-header">
+        <span class="item-title">
+          MIX-CLAP: Adaptive Fusion of Knowledge-Distilled Audio Embeddings for Noise-Aware Audio-Language Models
+        </span>
+        <span class="item-venue">ICASSP 2026（採択）</span>
+      </div>
+      <p class="desc">
+        Mix-CLAP を提案。クリーン／ノイズ蒸留した軽量音響エンコーダを適応的に融合し、
+        計算効率と雑音ロバスト性を両立する CLAP（Audio-Language Model）を実現。
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="item-header">
+        <a href="https://ieeexplore.ieee.org/document/11190853" class="item-title" target="_blank" rel="noopener noreferrer">
+          Multiple Sensor-head Phase-sensitive &phi;-OTDR Laser Vibrometer
+        </a>
+        <span class="item-venue">CLEO 2025</span>
+      </div>
+      <p class="desc">
+        光ファイバを用いた分布型音響センシングと併用できるレーザー振動計システムを提案。
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="item-header">
+        <a href="https://ieeexplore.ieee.org/document/10887613" class="item-title" target="_blank" rel="noopener noreferrer">
+          Text-guided Device-realistic Sound Generation for Fiber-based Sound Event Classification
+        </a>
+        <span class="item-venue">ICASSP 2025</span>
+      </div>
+      <p class="desc">
+       デバイスドメインが大きく異なる音響信号データなどを対象に、言語プロンプトを入力とする信号生成手法を提案。
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="item-header">
+        <a href="https://ieeexplore.ieee.org/document/11046548" class="item-title" target="_blank" rel="noopener noreferrer">
+          Underwater Acoustic OFDM Transmission over Optical Fiber with DAS
+        </a>
+        <span class="item-venue">OFC 2025</span>
+      </div>
+      <p class="desc">
+        DASに接続された光ファイバを介して、水中環境でのデータ伝送を実環境で実証。
+      </p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>学歴</h2>
+    <div class="card">
+      <div class="item-header">
+        <span class="item-title">博士（理学）— 物性物理学</span>
+        <span class="item-venue">北海道大学</span>
+      </div>
+      <div class="item-meta">日本学術振興会 特別研究員（DC2）｜日本</div>
+      <p class="desc">
+        量子場理論・統計物理を用いて、相転移、超伝導、ボース＝アインシュタイン凝縮（BEC）を理論的に研究。
+        基本的な量子統計原理に基づいて既存理論を一般化し、強相関現象へ応用。
+      </p>
+      <ul class="bullets">
+        <li><strong>超伝導渦糸系：</strong> Eilenberger理論およびGinzburg–Landau理論を超える枠組みを検討。</li>
+        <li><strong>弱相互作用BEC：</strong> Gross–Pitaevskii方程式およびBogoliubov近似を超える取り扱いを検討。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="phd-work">
+    <h2>博士課程での主要成果</h2>
+
+    <div class="card">
+      <div class="item-header">
+        <a href="https://doi.org/10.7566/JPSJ.85.083705" class="item-title" target="_blank" rel="noopener noreferrer">
+          Hall Effect in the Abrikosov Lattice of Type-II Superconductors
+        </a>
+        <span class="item-venue">JPSJ 2016 • Editors’ Choice</span>
+      </div>
+      <p class="desc">
+        拡張準古典方程式に基づき、アブリコソフ渦糸格子における渦の帯電とホール応答を理論的に解析。
+      </p>
+      <div style="margin-top:10px;">
+        <a href="https://doi.org/10.7566/JPSJ.85.083705" class="doi-link" target="_blank" rel="noopener noreferrer">
+          DOI: 10.7566/JPSJ.85.083705
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item-header">
+        <a href="https://doi.org/10.7566/JPSJ.87.034002" class="item-title" target="_blank" rel="noopener noreferrer">
+          Ground-State Wave Function in M-Component Miscible BECs
+        </a>
+        <span class="item-venue">JPSJ 2018</span>
+      </div>
+      <p class="desc">
+        多成分ミシブルBECに対して、平均場を超える変分多体系基底状態の記述を構築し、
+        相関効果と安定性を解析。
+      </p>
+      <div style="margin-top:10px;">
+        <a href="https://doi.org/10.7566/JPSJ.87.034002" class="doi-link" target="_blank" rel="noopener noreferrer">
+          DOI: 10.7566/JPSJ.87.034002
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>連絡先</h2>
+    <div class="card" style="text-align: center;">
+      <p class="desc">ご連絡は以下が確実です：</p>
+      <p style="font-size: 1.1rem;">
+        📧 <a href="mailto:wataru.kohno@gmail.com" style="color: var(--accent); text-decoration: none;">
+          wataru.kohno@gmail.com
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Wataru Kohno • GitHub Pages • Built with HTML/CSS/JS
+  </footer>
+</div>
+
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+      tabcontent[i].classList.remove("active");
+    }
+    tablinks = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.className += " active";
+  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
