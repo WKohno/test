@@ -1,4 +1,4 @@
-<!doctype html>
+!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
@@ -15,7 +15,7 @@
       --radius: 16px;
       --max-width: 850px;
     }
-
+ 
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -24,25 +24,25 @@
       color: var(--text-main);
       line-height: 1.6;
     }
-
+ 
     .wrap { max-width: var(--max-width); margin: 0 auto; padding: 60px 24px; }
-
+ 
     header { text-align: center; margin-bottom: 50px; }
     .avatar { width: 120px; height: 120px; border-radius: 50%; border: 1px solid var(--accent); padding: 4px; margin-bottom: 20px; }
     h1 { margin: 0; font-size: 36px; letter-spacing: -0.02em; }
     .title-sub { margin: 8px 0 20px; color: var(--accent); font-size: 1.2rem; font-weight: 500; }
-
+ 
     .meta { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; font-size: 14px; color: var(--text-muted); }
     .meta a { color: var(--text-main); text-decoration: none; border-bottom: 1px solid rgba(110,231,255,0.3); transition: 0.2s; }
     .meta a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-
+ 
     section { margin-bottom: 50px; }
     h2 {
       font-size: 13px; text-transform: uppercase; letter-spacing: 0.2em;
       color: var(--accent); border-bottom: 1px solid var(--border);
       padding-bottom: 8px; margin-bottom: 24px;
     }
-
+ 
     /* --- Tab Component --- */
     .tab-container { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
     .tab-nav { display: flex; border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02); overflow-x: auto; }
@@ -54,9 +54,9 @@
     .tab-btn.active { color: var(--accent); background: rgba(110,231,255,0.08); box-shadow: inset 0 -2px 0 var(--accent); }
     .tab-content { padding: 24px; display: none; min-height: 220px; }
     .tab-content.active { display: block; animation: fadeIn 0.4s ease; }
-
+ 
     @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-
+ 
     /* --- Items & Cards --- */
     .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
     .item-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
@@ -64,16 +64,16 @@
     .item-title:hover { color: var(--accent); }
     .item-venue { font-size: 13px; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
     .item-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
-
+ 
     .desc { font-size: 14.5px; color: var(--text-muted); }
     .bullets { margin: 12px 0 0 18px; padding: 0; font-size: 14px; color: var(--text-muted); }
     .bullets li { margin-bottom: 8px; }
-
+ 
     .doi-link { font-size: 13px; color: var(--accent); text-decoration: none; opacity: 0.8; }
     .doi-link:hover { opacity: 1; text-decoration: underline; }
-
+ 
     footer { text-align: center; padding: 60px 20px; font-size: 13px; color: var(--text-muted); opacity: 0.6; border-top: 1px solid var(--border); }
-
+ 
     @media (max-width: 600px) {
       .item-header { flex-direction: column; gap: 4px; }
       h1 { font-size: 28px; }
@@ -81,7 +81,7 @@
   </style>
 </head>
 <body>
-
+ 
 <div class="wrap">
   <header>
     <img src="../assets/avatar.jpeg" alt="河野 航" class="avatar" />
@@ -95,7 +95,7 @@
       <a href="../index.html" aria-label="Go to English page">English</a>
     </div>
   </header>
-
+ 
   <section id="about">
     <h2>概要</h2>
     <p class="desc">
@@ -104,7 +104,7 @@
       センシングシステムの開発を目指しています。
     </p>
   </section>
-
+ 
   <section id="research-focus">
     <h2>研究分野</h2>
     <div class="card">
@@ -116,7 +116,7 @@
       </ul>
     </div>
   </section>
-
+ 
   <section id="expertise">
     <h2>専門性</h2>
     <div class="tab-container">
@@ -126,7 +126,7 @@
         <button class="tab-btn" onclick="openTab(event, 'tools')">実務スキル</button>
         <button class="tab-btn" onclick="openTab(event, 'physics')">理論物理</button>
       </div>
-
+ 
       <div id="optical" class="tab-content active">
         <div style="font-weight: 600; margin-bottom: 10px; color: var(--accent);">
           光センシング／物理システム
@@ -137,7 +137,7 @@
           <li>信号取得・システムモデリング（センシング装置）</li>
         </ul>
       </div>
-
+ 
       <div id="physics" class="tab-content">
         <div style="font-weight: 600; margin-bottom: 10px; color: var(--accent);">
           理論・数理物理
@@ -149,7 +149,7 @@
           <li>相関現象に対する量子統計原理の一般化</li>
         </ul>
       </div>
-
+ 
       <div id="signal" class="tab-content">
         <div style="font-weight: 600; margin-bottom: 10px; color: var(--accent);">
           信号処理／機械学習
@@ -161,7 +161,7 @@
           <li>センシング制約を踏まえたMLモデル統合</li>
         </ul>
       </div>
-
+ 
       <div id="tools" class="tab-content">
         <div style="font-weight: 600; margin-bottom: 10px; color: var(--accent);">
           数値計算／ツール
@@ -175,23 +175,47 @@
       </div>
     </div>
   </section>
-
+ 
   <section id="publications">
     <h2>主要論文（最近）</h2>
-
+ 
     <div class="card">
       <div class="item-header">
-        <span class="item-title">
+        <a href="https://ieeexplore.ieee.org/document/11462496" class="item-title" target="_blank" rel="noopener noreferrer">
           MIX-CLAP: Adaptive Fusion of Knowledge-Distilled Audio Embeddings for Noise-Aware Audio-Language Models
-        </span>
-        <span class="item-venue">ICASSP 2026（採択）</span>
+        </a>
+        <span class="item-venue">ICASSP 2026</span>
       </div>
       <p class="desc">
         Mix-CLAP を提案。クリーン／ノイズ蒸留した軽量音響エンコーダを適応的に融合し、
         計算効率と雑音ロバスト性を両立する CLAP（Audio-Language Model）を実現。
       </p>
     </div>
-
+ 
+    <div class="card">
+      <div class="item-header">
+        <a href="https://www.nec-labs.com/blog/multi-fiber-multi-das-array-system-with-clock-free-synchronization/" class="item-title" target="_blank" rel="noopener noreferrer">
+          Multi-Fiber/Multi-DAS Array System with Clock-Free Synchronization
+        </a>
+        <span class="item-venue">OECC 2026（採択）</span>
+      </div>
+      <p class="desc">
+        独立した複数のセンサ間で追加ハードウェアなしにサンプル単位の同期を実現する、マルチファイバ・マルチDASアレイシステムを実証。
+      </p>
+    </div>
+ 
+    <div class="card">
+      <div class="item-header">
+        <span class="item-title">
+          Underwater Acoustic Semantic Data Transmission over an 80-km Distributed Fiber-Optic Sensing Link
+        </span>
+        <span class="item-venue">ECOC 2026（採択）</span>
+      </div>
+      <p class="desc">
+        80kmの水中光ファイバセンシングリンク上でシーングラフによる意味情報伝送を実証し、超低ビット誤り率を達成。
+      </p>
+    </div>
+ 
     <div class="card">
       <div class="item-header">
         <a href="https://ieeexplore.ieee.org/document/11190853" class="item-title" target="_blank" rel="noopener noreferrer">
@@ -203,7 +227,7 @@
         光ファイバを用いた分布型音響センシングと併用できるレーザー振動計システムを提案。
       </p>
     </div>
-
+ 
     <div class="card">
       <div class="item-header">
         <a href="https://ieeexplore.ieee.org/document/10887613" class="item-title" target="_blank" rel="noopener noreferrer">
@@ -215,7 +239,7 @@
        デバイスドメインが大きく異なる音響信号データなどを対象に、言語プロンプトを入力とする信号生成手法を提案。
       </p>
     </div>
-
+ 
     <div class="card">
       <div class="item-header">
         <a href="https://ieeexplore.ieee.org/document/11046548" class="item-title" target="_blank" rel="noopener noreferrer">
@@ -228,7 +252,7 @@
       </p>
     </div>
   </section>
-
+ 
   <section id="education">
     <h2>学歴</h2>
     <div class="card">
@@ -247,10 +271,10 @@
       </ul>
     </div>
   </section>
-
+ 
   <section id="phd-work">
     <h2>博士課程での主要成果</h2>
-
+ 
     <div class="card">
       <div class="item-header">
         <a href="https://doi.org/10.7566/JPSJ.85.083705" class="item-title" target="_blank" rel="noopener noreferrer">
@@ -267,7 +291,7 @@
         </a>
       </div>
     </div>
-
+ 
     <div class="card">
       <div class="item-header">
         <a href="https://doi.org/10.7566/JPSJ.87.034002" class="item-title" target="_blank" rel="noopener noreferrer">
@@ -286,7 +310,7 @@
       </div>
     </div>
   </section>
-
+ 
   <section id="contact">
     <h2>連絡先</h2>
     <div class="card" style="text-align: center;">
@@ -298,12 +322,12 @@
       </p>
     </div>
   </section>
-
+ 
   <footer>
     © <span id="year"></span> Wataru Kohno • GitHub Pages • Built with HTML/CSS/JS
   </footer>
 </div>
-
+ 
 <script>
   function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
