@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,7 +16,7 @@
       --radius: 16px;
       --max-width: 850px;
     }
-
+ 
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -24,25 +25,25 @@
       color: var(--text-main);
       line-height: 1.6;
     }
-
+ 
     .wrap { max-width: var(--max-width); margin: 0 auto; padding: 60px 24px; }
-
+ 
     header { text-align: center; margin-bottom: 50px; }
     .avatar { width: 120px; height: 120px; border-radius: 50%; border: 1px solid var(--accent); padding: 4px; margin-bottom: 20px; }
     h1 { margin: 0; font-size: 36px; letter-spacing: -0.02em; }
     .title-sub { margin: 8px 0 20px; color: var(--accent); font-size: 1.2rem; font-weight: 500; }
-
+ 
     .meta { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; font-size: 14px; color: var(--text-muted); }
     .meta a { color: var(--text-main); text-decoration: none; border-bottom: 1px solid rgba(110,231,255,0.3); transition: 0.2s; }
     .meta a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-
+ 
     section { margin-bottom: 50px; }
     h2 {
       font-size: 13px; text-transform: uppercase; letter-spacing: 0.2em;
       color: var(--accent); border-bottom: 1px solid var(--border);
       padding-bottom: 8px; margin-bottom: 24px;
     }
-
+ 
     /* --- Tab Component --- */
     .tab-container { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
     .tab-nav { display: flex; border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02); overflow-x: auto; }
@@ -54,9 +55,9 @@
     .tab-btn.active { color: var(--accent); background: rgba(110,231,255,0.08); box-shadow: inset 0 -2px 0 var(--accent); }
     .tab-content { padding: 24px; display: none; min-height: 220px; }
     .tab-content.active { display: block; animation: fadeIn 0.4s ease; }
-
+ 
     @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-
+ 
     /* --- Items & Cards --- */
     .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
     .item-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
@@ -64,16 +65,16 @@
     .item-title:hover { color: var(--accent); }
     .item-venue { font-size: 13px; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
     .item-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
-
+ 
     .desc { font-size: 14.5px; color: var(--text-muted); }
     .bullets { margin: 12px 0 0 18px; padding: 0; font-size: 14px; color: var(--text-muted); }
     .bullets li { margin-bottom: 8px; }
-
+ 
     .doi-link { font-size: 13px; color: var(--accent); text-decoration: none; opacity: 0.8; }
     .doi-link:hover { opacity: 1; text-decoration: underline; }
-
+ 
     footer { text-align: center; padding: 60px 20px; font-size: 13px; color: var(--text-muted); opacity: 0.6; border-top: 1px solid var(--border); }
-
+ 
     @media (max-width: 600px) {
       .item-header { flex-direction: column; gap: 4px; }
       h1 { font-size: 28px; }
@@ -81,7 +82,7 @@
   </style>
 </head>
 <body>
-
+ 
 <div class="wrap">
   <header>
     <img src="assets/avatar.jpeg" alt="Wataru Kohno" class="avatar" />
@@ -95,7 +96,7 @@
       <a href="./ja/index.html" aria-label="Go to Japanese page">Japanese</a>
     </div>
   </header>
-
+ 
   <section id="about">
     <h2>About</h2>
     <p class="desc">
@@ -105,7 +106,7 @@
       arrays for infrastructure monitoring, security, and environmental observation.
     </p>
   </section>
-
+ 
   <section id="research-focus">
     <h2>Research Focus</h2>
     <div class="card">
@@ -117,7 +118,7 @@
       </ul>
     </div>
   </section>
-
+ 
   <section id="expertise">
     <h2>Research Expertise</h2>
     <div class="tab-container">
@@ -127,7 +128,7 @@
         <button class="tab-btn" onclick="openTab(event, 'tools')">Practical Skills</button>
         <button class="tab-btn" onclick="openTab(event, 'physics')">Theoretical Physics</button>
       </div>
-
+ 
       <div id="optical" class="tab-content active">
         <div style="font-weight: 600; margin-bottom: 10px; color: var(--accent);">
           Optical Sensing &amp; Physical Systems
@@ -138,7 +139,7 @@
           <li>Signal acquisition and system modeling for sensing devices</li>
         </ul>
       </div>
-
+ 
       <div id="physics" class="tab-content">
         <div style="font-weight: 600; margin-bottom: 10px; color: var(--accent);">
           Theoretical &amp; Mathematical Physics
@@ -150,7 +151,7 @@
           <li>Generalizing quantum statistical principles for correlated phenomena</li>
         </ul>
       </div>
-
+ 
       <div id="signal" class="tab-content">
         <div style="font-weight: 600; margin-bottom: 10px; color: var(--accent);">
           Signal Processing &amp; Machine Learning
@@ -162,7 +163,7 @@
           <li>Integration of ML models with physical sensing constraints</li>
         </ul>
       </div>
-
+ 
       <div id="tools" class="tab-content">
         <div style="font-weight: 600; margin-bottom: 10px; color: var(--accent);">
           Numerical Calculation &amp; Tools
@@ -176,24 +177,47 @@
       </div>
     </div>
   </section>
-
+ 
   <section id="publications">
     <h2>Recent Primary Publications</h2>
     <div class="card">
   <div class="item-header">
-    <!-- No public link yet; add IEEE/arXiv link later -->
-    <span class="item-title">
+    <a href="https://ieeexplore.ieee.org/document/11462496" class="item-title" target="_blank" rel="noopener noreferrer">
       MIX-CLAP: Adaptive Fusion of Knowledge-Distilled Audio Embeddings for Noise-Aware Audio-Language Models
-    </span>
-    <span class="item-venue">ICASSP 2026 (Accepted)</span>
+    </a>
+    <span class="item-venue">ICASSP 2026</span>
   </div>
   <p class="desc">
     Proposed Mix-CLAP, a computationally efficient, noise-aware CLAP model that fuses clean/noise-distilled
     lightweight audio encoders.
   </p>
   </div>
-
-    
+ 
+    <div class="card">
+      <div class="item-header">
+        <a href="https://www.nec-labs.com/blog/multi-fiber-multi-das-array-system-with-clock-free-synchronization/" class="item-title" target="_blank" rel="noopener noreferrer">
+          Multi-Fiber/Multi-DAS Array System with Clock-Free Synchronization
+        </a>
+        <span class="item-venue">OECC 2026 (Accepted)</span>
+      </div>
+      <p class="desc">
+        Demonstrated a multi-fiber, multi-DAS array system achieving sample-level synchronization across independent sensors without additional hardware.
+      </p>
+    </div>
+ 
+    <div class="card">
+      <div class="item-header">
+        <!-- No public link yet -->
+        <span class="item-title">
+          Underwater Acoustic Semantic Data Transmission over an 80-km Distributed Fiber-Optic Sensing Link
+        </span>
+        <span class="item-venue">ECOC 2026 (Accepted)</span>
+      </div>
+      <p class="desc">
+        Demonstrated semantic scene-graph transmission over an 80-km underwater DAS-based fiber-optic sensing link with an ultra-low bit error rate.
+      </p>
+    </div>
+ 
     <div class="card">
       <div class="item-header">
         <a href="https://ieeexplore.ieee.org/document/11190853" class="item-title" target="_blank" rel="noopener noreferrer">
@@ -205,7 +229,7 @@
         Proposed a multi–sensor-head architecture that enables scalable distributed acoustic sensing with remote laser sensing.
       </p>
     </div>
-
+ 
     <div class="card">
       <div class="item-header">
         <a href="https://ieeexplore.ieee.org/document/10887613" class="item-title" target="_blank" rel="noopener noreferrer">
@@ -217,7 +241,7 @@
         Introduced text-guided synthetic data generation that preserves key characteristics of fiber-optic acoustic sensing systems.
       </p>
     </div>
-
+ 
     <div class="card">
       <div class="item-header">
         <a href="https://ieeexplore.ieee.org/document/11046548" class="item-title" target="_blank" rel="noopener noreferrer">
@@ -230,7 +254,7 @@
       </p>
     </div>
   </section>
-
+ 
   <section id="education">
     <h2>Education</h2>
     <div class="card">
@@ -250,10 +274,10 @@
       </ul>
     </div>
   </section>
-
+ 
   <section id="phd-work">
     <h2>Selected PhD Works</h2>
-
+ 
     <div class="card">
       <div class="item-header">
         <a href="https://doi.org/10.7566/JPSJ.85.083705" class="item-title" target="_blank" rel="noopener noreferrer">
@@ -270,7 +294,7 @@
         </a>
       </div>
     </div>
-
+ 
     <div class="card">
       <div class="item-header">
         <a href="https://doi.org/10.7566/JPSJ.87.034002" class="item-title" target="_blank" rel="noopener noreferrer">
@@ -289,7 +313,7 @@
       </div>
     </div>
   </section>
-
+ 
   <section id="contact">
     <h2>Contact</h2>
     <div class="card" style="text-align: center;">
@@ -301,12 +325,12 @@
       </p>
     </div>
   </section>
-
+ 
   <footer>
     © <span id="year"></span> Wataru Kohno • GitHub Pages • Built with HTML/CSS/JS
   </footer>
 </div>
-
+ 
 <script>
   function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
@@ -327,4 +351,3 @@
 </script>
 </body>
 </html>
-
